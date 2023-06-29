@@ -1,0 +1,17 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wynik</title>
+</head>
+<body>
+    <h1>Wynik</h1>
+    {% if success %}
+        <p>Dane z feeda ODATA zostały zapisane jako plik CSV i wysłane emailem.</p>
+    {% else %}
+        <p>Wystąpił błąd: {{ error_message }}</p>
+        <p>Program działał dalej i można spróbować ponownie.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Powrót</a>
+</body>
+</html>

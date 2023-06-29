@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formularz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Pobierz dane z feeda ODATA</h1>
+    <form method="POST">
+        <label for="feed_url">URL feeda ODATA:</label>
+        <input type="text" name="feed_url" id="feed_url" required><input type="submit" value="Pokaż dane"><br><br>
+        <label for="receiver_email">Adres e-mail odbiorcy:</label>
+        <input type="email" name="receiver_email" id="receiver_email" ><input type="submit" value="Wyślij dane"><br><br>     
+        {% if table_html %}
+    <div>
+        {{ feed_url|safe }} 
+        {{ table_html|safe }}
+    </div>
+{% endif %}
+    </form>
+
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/898ab9ef-96c6-4411-b3fd-9911d3663122/resourceGroups/webHosting/providers/Microsoft.Web/sites/odatabrowser",
+    "appService.deploySubpath": "."
+}
